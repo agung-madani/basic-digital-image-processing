@@ -1,8 +1,16 @@
 # Digital Image Processing Using Apache Netbeans IDE 15
+ The repository includes examples of basic image processing. All of the code in this repository is written in Java and can be easily modified.
+
+## Usage
+1. Copy script and paste it in your Apache Netbeans
+2. Adjust some lines based on yours, such as package, class name, and read image file Location/save modified image file location.
+3. Follow the comments in the code to learn how each technique is implemented and try experimenting with the code to see how you can customize the image processing results.
+
+## Images Source
 Zelda image source: [zelda.jpg](https://drive.google.com/file/d/1pjQUXKYWsqLRSkiYK2x0YSsN6jHY0v4j/view?usp=sharing) <br>
 Lena b&w image source: [lena.jpg](https://drive.google.com/file/d/1jJi-QKoafgafpuaDd9g5093XTtkrEEjN/view?usp=share_link)
 
-List:
+## List
 * Brightening<br>
 ![Brightening](https://user-images.githubusercontent.com/121701309/211243253-a76c58d6-9422-41fd-8b5a-17e659c598ee.jpg)
 * Contrast Stretching using Formula<br>

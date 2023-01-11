@@ -5,31 +5,43 @@
 
 - [Usage](#usage)
 - [Images Source](#images-source)
-- [Arithmatics Operations (Division by Scalar | Division Two Images)](#arithmatics-operations)
+- [Arithmatics Operations (Addition Two Images | Average Two Images | Division by Scalar | Division Two Images | Multiplication by Scalar | Multiplication Two Images | Substraction Two Images)](#arithmatics-operations)
 - [Convolution](#convolution)
-- [Geometry Operation (Flipping Horizontal | Flipping Vertical)](#geometry-operation)
+- [Geometry Operation (Flipping Horizontal | Flipping Vertical | Rotation Clockwise | Rotation Counter Clockwise | Rotation Radians)](#geometry-operation)
 - [Histogram](#histogram)
 - [Image Enhancement (Contrast Stretching using Formula | Contrast Stretching Min Max | Contrast Stretching using Formula Clipping)](#image-enhancement)
 - [Point Operation (Brightening | Grayscale Formula((R + G + B) / 3) | Grayscale Formula(0.299R + 0.587G + 0.144B) | Negative)](#point-operation)
 
 ## Usage
-[Table of Contents](#table-of-contents) <br>
+[Table of Contents](#table-of-contents)
+
 1. Copy script and paste it in your Apache Netbeans
 2. Adjust some lines based on yours, such as package, class name, and read image file Location/save modified image file location.
 3. Follow the comments in the code to learn how each technique is implemented and try experimenting with the code to see how you can customize the image processing results.
 
 ## Images Source
-[Table of Contents](#table-of-contents) <br>
-Zelda image source: [zelda.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/zelda.jpg) <br>
+[Table of Contents](#table-of-contents)
+
+Cameramen image source: [The-original-cameraman-image.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/The-original-cameraman-image.png) <br>
 One Cup BW image source: [cups_one_bw.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/cups_one_bw.png) <br>
 Three Cups BW image source: [cups_three_bw.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/cups_three_bw.png) <br>
-Smiling Girl image source: [girl.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/girl.jpg) <br>
+Girl Smilling image source: [girl.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/girl.jpg) <br>
+Lena BW image source: [lena.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/lena.jpg) <br>
 Lena Color image source: [lenaColor.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/lenaColor.jpg) <br>
-Lena BW image source: [lena.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/lena.jpg)
-
+Peppers image source: [peppers.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/peppers.png) <br>
+Peppers Fake image source: [peppers_fake.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/peppers_fake.png) <br>
+Zelda image source: [zelda.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/zelda.jpg)
 
 ## Arithmatics Operations
 [Table of Contents](#table-of-contents) <br>
+* Addition Two Images<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/AdditionTwoImages.java <br>
+![AdditionTwoImages](https://user-images.githubusercontent.com/121701309/211736238-f82e7483-4912-447e-b1a0-f82ffe7a7512.jpg)
+
+* Average Two Images<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/AverageTwoImages.java <br>
+![AverageTwoImages](https://user-images.githubusercontent.com/121701309/211736356-5cc4688b-7bd5-459b-a458-1bfd36eba885.jpg)
+
 * Division by Scalar<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/DivisionScalar.java <br>
 ![DivisionScalar](https://user-images.githubusercontent.com/121701309/211472113-304a3703-ff65-48e6-8147-8689b2df5fd3.jpg)
@@ -37,6 +49,18 @@ https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/bl
 * Division Two Images<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/DivisionTwoImages.java <br>
 ![DivisionTwoImages](https://user-images.githubusercontent.com/121701309/211473212-6cdb7185-b3d6-4cad-ba66-19cbef73701d.jpg)
+
+* Multiplication by Scalar<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/MultiplicationScalar.java <br>
+![MultiplicationScalar](https://user-images.githubusercontent.com/121701309/211736610-2cebb362-5c40-4c8e-bbf9-97985a239705.jpg)
+
+* Multiplication Two Images<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/MultiplicationTwoImages.java <br>
+![MultiplicationTwoImages](https://user-images.githubusercontent.com/121701309/211736730-1af7f8a6-1951-40b6-acf4-7d878c2cdf4e.jpg)
+
+* Substraction Two Images<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/SubstractionTwoImages.java <br>
+![SubstractionTwoImages](https://user-images.githubusercontent.com/121701309/211736821-54b4719e-a5d5-47b7-beeb-16b63358d8bf.jpg)
 
 ## Convolution
 [Table of Contents](#table-of-contents) <br>
@@ -65,6 +89,18 @@ https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/bl
 * Flipping Vertical<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/FlippingVertical.java <br>
 ![flipVertical](https://user-images.githubusercontent.com/121701309/211243554-2e421e9c-b0f2-4fd4-83d9-5d5da01de181.jpg)
+
+* Rotation Clockwise<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/RotateClockWise.java <br>
+![RotateCW](https://user-images.githubusercontent.com/121701309/211737258-87408e25-f8c2-423c-91b2-525e370f3946.jpg)
+
+* Rotation Counter Clockwise<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/RotateCounterClockWise.java <br>
+![RotateCCW](https://user-images.githubusercontent.com/121701309/211737337-f2cd87a1-acba-4f97-bcaa-a335d0b66194.jpg)
+
+* Rotation Radians<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/RotateRadian.java <br>
+![RotateRadian](https://user-images.githubusercontent.com/121701309/211737604-b3d4bb35-78b5-4b49-bf4d-506a1a402d14.jpg)
 
 ## Histogram
 [Table of Contents](#table-of-contents) <br>

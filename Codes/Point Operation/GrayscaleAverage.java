@@ -15,38 +15,34 @@ import javax.imageio.ImageIO;
  */
 public class GrayscaleAverage {
 
-    public static void main(String[] args) {
-        try {
-            // Read the input image file and store it in a BufferedImage object
-            BufferedImage img = ImageIO.read(new File("Z:\\citraJava\\lenaColor.jpg"));
+    public static void main(String[] args) throws IOException {
+        // Read the input image file and store it in a BufferedImage object
+        BufferedImage img = ImageIO.read(new File("Z:\\citraJava\\lenaColor.jpg"));
 
-            // get image's width and height
-            int width = img.getWidth();
-            int height = img.getHeight();
+        // get image's width and height
+        int width = img.getWidth();
+        int height = img.getHeight();
 
-            // convert to grayscale
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
+        // convert to grayscale
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
 
-                    // get red, green, and blue values of pixel at (x, y)
-                    int r = (img.getRGB(x, y) >> 16) & 0xff;
-                    int g = (img.getRGB(x, y) >> 8) & 0xff;
-                    int b = img.getRGB(x, y) & 0xff;
+                // get red, green, and blue values of pixel at (x, y)
+                int r = (img.getRGB(x, y) >> 16) & 0xff;
+                int g = (img.getRGB(x, y) >> 8) & 0xff;
+                int b = img.getRGB(x, y) & 0xff;
 
-                    // calculate average of red, green, and blue values
-                    int avg = (r + g + b) / 3;
+                // calculate average of red, green, and blue values
+                int avg = (r + g + b) / 3;
 
-                    // create new pixel with average value for red, green, and blue channels
-                    int pixelNew = (avg << 16) | (avg << 8) | avg;
+                // create new pixel with average value for red, green, and blue channels
+                int pixelNew = (avg << 16) | (avg << 8) | avg;
 
-                    // set pixel at (x, y) to new pixel value
-                    img.setRGB(x, y, pixelNew);
-                }
+                // set pixel at (x, y) to new pixel value
+                img.setRGB(x, y, pixelNew);
             }
-            // save modified image to file
-            ImageIO.write(img, "jpg", new File("Z:\\citraJava\\GrayscaleAverageTest.jpg"));
-        } catch (IOException e) {
-            // Handle exception if image cannot be read from file
         }
+        // save modified image to file
+        ImageIO.write(img, "jpg", new File("Z:\\citraJava\\GrayscaleAverageTest.jpg"));
     }
 }

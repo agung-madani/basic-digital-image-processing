@@ -4,7 +4,6 @@
  */
 package com.mycompany.mavenproject1;
 
-import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -28,21 +27,28 @@ public class FlippingHorizontal {
         BufferedImage img2 = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
         // Iterate over all the pixels in the image
-        for (int i = 0; i <= height - 1; i++) {
+        for (int x = 0; x < height; x++) {
             // Initialize k as the width of the image minus 1
             int k = width - 1;
-            for (int j = 0; j <= width - 1; j++) {
-                // Get the color of the pixel at (j, i) in the input image
-                Color c = new Color(img1.getRGB(j, i));
+            for (int y = 0; y < width; y++) {
+                // Extract red, green and blue color values using bitwise operations
+                int r = (img1.getRGB(y, x) >> 16) & 0xFF;
+                int g = (img1.getRGB(y, x) >> 8) & 0xFF;
+                int b = img1.getRGB(y, x) & 0xFF;
 
-                // Set the pixel at (k, i) in the output image to the same color
-                img2.setRGB(k, i, c.getRGB());
+                // Create a new pixel value with the extracted color values
+                int pixelNew = (r << 16) | (g << 8) | b;
 
+                // Set the pixel in the new image at the coordinates (k, x) with the new pixel value
+                // So for every x,y in original it is saved in k,x in new image 
+                // k is calculated as height -1 to reverse the y axis.
+                img2.setRGB(k, x, pixelNew);
+                
                 // Decrement k by 1
-                k -= 1;
+                k--;
             }
         }
         // save modified image to file
-        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\FlippingHorizontalTest.jpg"));
+        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\FlippingHorizontalTest2.jpg"));
     }
 }

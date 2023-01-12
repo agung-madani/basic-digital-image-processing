@@ -26,28 +26,16 @@ public class RotateCounterClockWise {
         // Create a new BufferedImage with the same width and height, but with a different image type (TYPE_INT_RGB)
         BufferedImage img2 = new BufferedImage(height, width, BufferedImage.TYPE_INT_RGB);
 
-        int k = width - 1;
         // Iterate over the pixels of the original image
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                // Extract red, green and blue color values using bitwise operations
-                int r = (img1.getRGB(x, y) >> 16) & 0xFF;
-                int g = (img1.getRGB(x, y) >> 8) & 0xFF;
-                int b = img1.getRGB(x, y) & 0xFF;
-
-                // Create a new pixel value with the extracted color values
-                int pixelNew = (r << 16) | (g << 8) | b;
-
-                // Set the pixel in the new image at the coordinates (y, k) with the new pixel value
-                // So for every x,y in original it is saved in y,k in new image 
-                // k is calculated as width -1 to reverse the x axis.
-                img2.setRGB(y, k, pixelNew);
+                // get the color of the pixel at (x, y) on the original image
+                Color c = new Color(img1.getRGB(x, y));
+                //set the color of the pixel at (y, width - 1 - x) on the new image 
+                img2.setRGB(y, width - 1 - x, c.getRGB());
             }
-            k--;
         }
-
         // Save the modified image to file
-        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\RotateCCWTest.jpg"));
-
+        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\RotateCCWTest123.jpg"));
     }
 }

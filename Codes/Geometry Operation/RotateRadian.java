@@ -27,8 +27,9 @@ public class RotateRadian {
         int midy = (height / 2);
 
         // Width and height of new image
-        int widthNew = width * 2; // must bigger than original image, recommend twice bigger
-        int heightNew = height * 2; // must bigger than original image, recommend twice bigger
+        // Must bigger than original image, recommend twice bigger, so you can see the full image of rotated image.
+        int widthNew = 1000; 
+        int heightNew = 1000;
 
         // Create a new BufferedImage with new width and height, with a different image type (TYPE_INT_RGB)
         BufferedImage img2 = new BufferedImage(widthNew, heightNew, BufferedImage.TYPE_INT_RGB);

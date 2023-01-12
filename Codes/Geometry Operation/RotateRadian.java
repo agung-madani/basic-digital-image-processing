@@ -27,7 +27,7 @@ public class RotateRadian {
         int midy = (height / 2);
 
         // Width and height of new image
-        // Must bigger than original image, recommend twice bigger, so you can see the full image of rotated image.
+        // Must bigger than original image, so that you can see the full image of rotated image.
         int widthNew = 1000; 
         int heightNew = 1000;
 

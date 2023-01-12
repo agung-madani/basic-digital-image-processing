@@ -31,7 +31,7 @@ public class RotateClockWise {
             for (int y = 0; y < height; y++) {
                 // get the color of the pixel at (x, y) on the original image
                 Color c = new Color(img1.getRGB(x, y));
-                //set the color of the pixel at (y, x) on the new image 
+                //set the color of the pixel at (height-1-y, x) on the new image 
                 img2.setRGB(height - 1 - y, x, c.getRGB());
             }
         }

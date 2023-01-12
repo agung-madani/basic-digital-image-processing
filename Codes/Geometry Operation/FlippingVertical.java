@@ -20,18 +20,23 @@ public class FlippingVertical {
         // Read the input image file and store it in a BufferedImage object
         BufferedImage img1 = ImageIO.read(new File("Z:\\citraJava\\lena.jpg"));
 
+        // Get image's width and height
         int width = img1.getWidth();
         int height = img1.getHeight();
-
+        
+        // Create a new BufferedImage with the same width and height, but with a different image type (TYPE_INT_RGB)
         BufferedImage img2 = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-
+        
+        // Iterate over the pixels of the original image
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
+                // get the color of the pixel at (x, y) on the original image
                 Color c = new Color(img1.getRGB(x, y));
-                img2.setRGB(x, height-1-y, c.getRGB());
+                //set the color of the pixel at (x, height - 1 - y) on the new image 
+                img2.setRGB(x, height - 1 - y, c.getRGB());
             }
         }
         // save modified image to file
-        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\FlippingVerticalTest2.jpg"));
+        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\FlippingVerticalTest.jpg"));
     }
 }

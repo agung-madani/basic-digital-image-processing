@@ -6,11 +6,12 @@
 - [Usage](#usage)
 - [Images Source](#images-source)
 - [Arithmatics Operations (Addition Two Images | Average Two Images | Division by Scalar | Division Two Images | Multiplication by Scalar | Multiplication Two Images | Substraction Two Images)](#arithmatics-operations)
+- [Boolean Operation (Operator AND | Operator NOT | Operator OR)](#boolean-operation)
 - [Convolution](#convolution)
-- [Geometry Operation (Flipping Horizontal | Flipping Vertical | Rotation Clockwise | Rotation Counter Clockwise | Rotation Radians)](#geometry-operation)
+- [Geometry Operation (Flipping x = width-x, y | Flipping x, y = height-y | Flipping x = width-x, y = height-y | Flipping x = y | Rotation Clockwise | Rotation Counter Clockwise | Rotation Radians | Translation | Zoom In/Resize Bigger | Zoom Out/Resize Smaller)](#geometry-operation)
 - [Histogram](#histogram)
 - [Image Enhancement (Contrast Stretching using Formula | Contrast Stretching Min Max | Contrast Stretching using Formula Clipping)](#image-enhancement)
-- [Point Operation (Brightening | Grayscale Formula((R + G + B) / 3) | Grayscale Formula(0.299R + 0.587G + 0.144B) | Negative)](#point-operation)
+- [Point Operation (Brightening | Grayscale Formula((R + G + B) / 3) | Grayscale Formula(0.299R + 0.587G + 0.144B) | Negative | Thresholding)](#point-operation)
 
 ## Usage
 [Table of Contents](#table-of-contents)
@@ -22,6 +23,7 @@
 ## Images Source
 [Table of Contents](#table-of-contents)
 
+San Francisco image source: [1970s-1980s-san-francisco.jpg](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/1970s-1980s-san-francisco.jpg) <br>
 Cameramen image source: [The-original-cameraman-image.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/The-original-cameraman-image.png) <br>
 One Cup BW image source: [cups_one_bw.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/cups_one_bw.png) <br>
 Three Cups BW image source: [cups_three_bw.png](https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/imagesrc/cups_three_bw.png) <br>
@@ -62,6 +64,20 @@ https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/bl
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Arithmatics%20Operations/SubstractionTwoImages.java <br>
 ![SubstractionTwoImages](https://user-images.githubusercontent.com/121701309/211736821-54b4719e-a5d5-47b7-beeb-16b63358d8bf.jpg)
 
+## Boolean Operation
+[Table of Contents](#table-of-contents) <br>
+* Operator AND<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Boolean%20Operation/OperatorAND.java <br>
+![AndOperator](https://user-images.githubusercontent.com/121701309/211987363-8d8df252-0e23-4e67-8719-c26d7d13e8ff.jpg)
+
+* Operator NOT<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Boolean%20Operation/OperatorNOT.java <br>
+![NotOperator](https://user-images.githubusercontent.com/121701309/211987471-0d19de8a-5270-4014-98d2-f2c967852474.jpg)
+
+* Operator NOT<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Boolean%20Operation/OperatorOR.java <br>
+![OrOperator](https://user-images.githubusercontent.com/121701309/211987573-03401485-a524-4457-8c63-b33a1c563279.jpg)
+
 ## Convolution
 [Table of Contents](#table-of-contents) <br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Convolution/Konvolusi.java <br>
@@ -82,13 +98,21 @@ Sharpness:
 
 ## Geometry Operation
 [Table of Contents](#table-of-contents) <br>
-* Flipping Horizontal<br>
+* Flipping x = width-x, y<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/FlippingHorizontal.java <br>
 ![flipHorizontal](https://user-images.githubusercontent.com/121701309/211243417-dcf8bc0f-a109-4c32-8253-db6944e08317.jpg)
 
-* Flipping Vertical<br>
+* Flipping x, y = height-y<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/FlippingVertical.java <br>
 ![flipVertical](https://user-images.githubusercontent.com/121701309/211243554-2e421e9c-b0f2-4fd4-83d9-5d5da01de181.jpg)
+
+* Flipping x = width-x, y = height-y<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/MirrorCartesian.java <br>
+![MirrorCartesian](https://user-images.githubusercontent.com/121701309/211988153-8f750859-91c2-4d69-8c6e-29aa4e107f32.jpg)
+
+* Flipping x = y<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/MirrorXYEqual.java <br>
+![MirrorXYEqual](https://user-images.githubusercontent.com/121701309/211988095-7ce8c834-eb15-42c2-88f8-ab59cb74eaa1.jpg)
 
 * Rotation Clockwise<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/RotateClockWise.java <br>
@@ -101,6 +125,18 @@ https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/bl
 * Rotation Radians<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/RotateRadian.java <br>
 ![RotateRadian](https://user-images.githubusercontent.com/121701309/211737604-b3d4bb35-78b5-4b49-bf4d-506a1a402d14.jpg)
+
+* Translation<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/Translasi.java <br>
+![Translation](https://user-images.githubusercontent.com/121701309/211988403-036b7f08-7ae7-4efc-86e2-c42ad6800a50.jpg)
+
+* Zoom In/Resize Bigger<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/ZoomIn.java <br>
+![ZoomIn](https://user-images.githubusercontent.com/121701309/211988413-c7838a16-314f-4563-989a-8148fe256d66.jpg)
+
+* Zoom Out/Resize Smaller<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Geometry%20Operation/ZoomOut.java <br>
+![ZoomOut](https://user-images.githubusercontent.com/121701309/211988421-8fa097be-fe99-4a3e-96be-79c2bd29b651.jpg)
 
 ## Histogram
 [Table of Contents](#table-of-contents) <br>
@@ -146,9 +182,6 @@ See the difference...<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Point%20Operation/Negative.java <br>
 ![Negative](https://user-images.githubusercontent.com/121701309/211483777-bd08db24-bf99-4f62-9148-4a1041e9fcbd.jpg)
 
-
-
-
-
-
-
+* Thresholding<br>
+https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Point%20Operation/Thresholding.java <br>
+![Thresholding](https://user-images.githubusercontent.com/121701309/211988518-0af5f0b2-5035-4a4a-9e0e-432406f419bb.jpg)

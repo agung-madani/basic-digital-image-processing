@@ -4,6 +4,7 @@
  */
 package com.mycompany.mavenproject1;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
@@ -27,24 +28,14 @@ public class RotateClockWise {
 
         // Iterate over the pixels of the original image
         for (int x = 0; x < width; x++) {
-            int k = height - 1;
             for (int y = 0; y < height; y++) {
-                // Extract red, green and blue color values using bitwise operations
-                int r = (img1.getRGB(x, y) >> 16) & 0xFF;
-                int g = (img1.getRGB(x, y) >> 8) & 0xFF;
-                int b = img1.getRGB(x, y) & 0xFF;
-
-                // Create a new pixel value with the extracted color values
-                int pixelNew = (r << 16) | (g << 8) | b;
-
-                // Set the pixel in the new image at the coordinates (k, x) with the new pixel value
-                // So for every x,y in original it is saved in k,x in new image 
-                // k is calculated as height -1 to reverse the y axis.
-                img2.setRGB(k, x, pixelNew);
-                k--;
+                // get the color of the pixel at (x, y) on the original image
+                Color c = new Color(img1.getRGB(x, y));
+                //set the color of the pixel at (y, x) on the new image 
+                img2.setRGB(height - 1 - y, x, c.getRGB());
             }
         }
         // Save the modified image to file
-        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\RotateCWTest.jpg"));
+        ImageIO.write(img2, "jpg", new File("Z:\\citraJava\\RotateCWTest2.jpg"));
     }
 }

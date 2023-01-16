@@ -74,7 +74,7 @@ https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/bl
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Boolean%20Operation/OperatorNOT.java <br>
 ![NotOperator](https://user-images.githubusercontent.com/121701309/211987471-0d19de8a-5270-4014-98d2-f2c967852474.jpg)
 
-* Operator NOT<br>
+* Operator OR<br>
 https://github.com/agung-madani/digital-image-processing-apache-netbeans-java/blob/main/Codes/Boolean%20Operation/OperatorOR.java <br>
 ![OrOperator](https://user-images.githubusercontent.com/121701309/211987573-03401485-a524-4457-8c63-b33a1c563279.jpg)
 
